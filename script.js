@@ -11,6 +11,7 @@ function createGrid () {
         for (let j = 0; j < GRID_SIZE; j++) {
             const CELL = document.createElement('div');
             CELL.className = "cell";
+            CELL.addEventListener('mouseover', () => paintCell(CELL));
             ROW.appendChild(CELL);
         }
 
@@ -19,3 +20,8 @@ function createGrid () {
 }
 
 createGrid();
+
+// function: paint cell black
+function paintCell(cell) {
+    cell.style.backgroundColor = 'black';
+}
